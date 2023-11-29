@@ -23,6 +23,11 @@ async function pegarEndereço(cep) {
 
     const data = await response.json()
 
+    if(data.erro == true) {
+        alert('CEP Inválido. Tente novamente! ')
+        return
+    }
+
     logradouro.value = data.logradouro
     logradouro.disabled = false
 
