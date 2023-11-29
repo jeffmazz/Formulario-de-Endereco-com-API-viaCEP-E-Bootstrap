@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title> Address's Form with Bootstrap 5 </title>
+</head>
+<body class="bg-dark bg-opacity-75">
+    
+    <div class="container-fluid border-top border-bottom sticky-top p-2 bg-dark">
+        <h2 class="text-center text-white my-1"> Address's Form with API and Bootstrap 5 </h2>
+    </div>
+
+    <div class="container-fluid border-top border-bottom border-light my-4 p-3 bg-dark w-75" id="divForm">
+    
+        <h3 class="text-center text-white mb-3"> Registration Form </h3>
+
+        <form action="index2.html" class="needs-validation" id="form" novalidate>
+
+            <div class="row justify-content-center mb-2">
+                <!-- Logradouro -->
+                <div class="col-10 form-floating mb-2">
+
+                    <input type="text" id="logradouro" placeholder=" " class="form-control" required disabled>
+
+                    <label for="logradouro" class="form-label ms-2"> Logradouro </label>
+                    
+                    <div class="valid-feedback"> Tudo Ok ! </div>
+
+                    <div class="invalid-feedback"> Algo está errado ! </div>
+
+                </div>
+                <!-- Numero -->
+                <div class="col-2 form-floating mb-2">
+
+                    <input type="tel" id="numero" placeholder=" " maxlength="5" minlength="1" class="form-control" required disabled>
+
+                    <label for="numero" class="form-label ms-2"> N° </label>
+
+                    <div class="valid-feedback"> Tudo Ok ! </div>
+
+                    <div class="invalid-feedback"> Algo está errado ! </div>
+
+                </div>
+                <!-- Complemento -->
+                <div class="col-12 form-floating mb-2">
+
+                    <input type="text" id="complemento" placeholder=" " class="form-control" disabled>
+
+                    <label for="complemento" class="form-label ms-2"> Complemento (Opcional) </label>
+
+                    <div class="valid-feedback"> Tudo Ok ! </div>
+
+                    <div class="invalid-feedback"> Algo está errado ! </div>
+
+                </div>
+                <!-- Bairro -->
+                <div class="col-12 form-floating mb-2">
+
+                    <input type="text" id="bairro" placeholder=" " class="form-control" required disabled>
+
+                    <label for="Bairro" class="form-label ms-2"> Bairro </label>
+
+                    <div class="valid-feedback"> Tudo Ok ! </div>
+
+                    <div class="invalid-feedback"> Algo está errado ! </div>
+
+                </div>
+                <!-- Estado -->
+                <div class="col-12 form-floating mb-2">
+
+                    <input type="text" id="estado" placeholder=" " class="form-control" required disabled>
+
+                    <!-- <select id="estado" placeholder=" " class="form-select" required>
+
+                        <option value="">AC</option>
+                        <option value="">AL</option>
+                        <option value="">AP</option>
+                        <option value="">AM</option>
+                        <option value="">BA</option>
+                        <option value="">CE</option>
+                        <option value="">DF</option>
+                        <option value="">ES</option>
+                        <option value="">GO</option>
+                        <option value="">MA</option>
+                        <option value="">MT</option>
+                        <option value="">MS</option>
+                        <option value="">MG</option>
+                        <option value="">PA</option>
+                        <option value="">PB</option>
+                        <option value="">PR</option>
+                        <option value="">PE</option>
+                        <option value="">PI</option>
+                        <option value="">RJ</option>
+                        <option value="">RN</option>
+                        <option value="">RS</option>
+                        <option value="">RO</option>
+                        <option value="">RR</option>
+                        <option value="">SC</option>
+                        <option value="">SP</option>
+                        <option value="">SE</option>
+                        <option value="">TO</option>
+
+                    </select> -->
+                    
+                    <label for="estado" class="form-label ms-2"> UF </label>
+
+                    <div class="valid-feedback"> Tudo Ok ! </div>
+
+                    <div class="invalid-feedback"> Algo está errado ! </div>
+
+                </div>
+                <!-- Cidade -->
+                <div class="col-12 form-floating mb-2">
+
+                    <input type="text" id="cidade" placeholder=" " class="form-control" required disabled>
+
+                    <label for="cidade" class="form-label ms-2"> Cidade </label>
+
+                    <div class="valid-feedback"> Tudo Ok ! </div>
+
+                    <div class="invalid-feedback"> Algo está errado ! </div>
+
+                </div>
+                <!-- Celular -->
+                <div class="col-6 form-floating mb-2">
+
+                    <input type="text" id="celular" placeholder=" " pattern="[0-9]{11}" maxlength="11" class="form-control mb-2" required>
+
+                    <label for="celular" class="form-label ms-2"> Celular </label>
+
+                    <div class="valid-feedback"> Tudo Ok ! </div>
+
+                    <div class="invalid-feedback"> Algo está errado ! </div>
+
+                </div>
+                <!-- CEP -->
+                <div class="col-6 form-floating mb-2">
+
+                    <input type="text" id="cep" placeholder=" " maxlength="8" pattern="[0-9]{8}" class="form-control" oninput="javascript: if (this.value.length !== 8) return" required>
+
+                    <label for="cep" class="form-label ms-2"> CEP </label>
+
+                    <div class="valid-feedback"> Tudo Ok ! </div>
+
+                    <div class="invalid-feedback"> Algo está errado ! </div>
+                    
+                </div>
+
+            </div>
+            <!-- Submit -->
+            <div class="row justify-content-center">
+
+                <div class="col-4">
+
+                    <button type="submit" id="submit" class="form-control btn btn-success d-flex justify-content-center align-items-center"> Enviar </button>
+
+                </div>
+
+            </div>
+                
+
+            </div>
+
+        </form>
+        
+    </div>
+
+    <div class="container-fluid p-1 border-top border-bottom border-light bg-dark">
+    
+        <div class="text-center text-white">
+            
+            <h4 class="mb-0 mt-1">
+            <a class="bi-facebook text-white mx-3"></a>
+            <a class="bi-twitter text-white mx-3"></a>
+            <a class="bi-instagram text-white mx-3"></a>
+            <a class="bi-youtube text-white mx-3"></a>
+            </h4>
+
+            <p class="fst-italic mb-0"> By - Jefferson Mazzotta </p>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        (() => {
+            'use strict'
+
+
+            const forms = document.querySelectorAll('.needs-validation')
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+
+    <script src="script.js"> </script>
+</body>
+</html>
